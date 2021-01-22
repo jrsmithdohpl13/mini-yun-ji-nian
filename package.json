@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "photo-sphere-viewer": "^3.5.1",
+    "three": "^0.124.0"
+  }
+}
