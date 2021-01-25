@@ -1,0 +1,1 @@
+<scroll-view scroll-y="true"><block wx:for="{{contriList}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view><contribution-card vue-id="{{'1e91ca40-1-'+index}}" comtriObj="{{item}}" data-event-opts="{{[['^goContri',[['goContribution']]]]}}" bind:goContri="__e" bind:__l="__l"></contribution-card></view></block></scroll-view>

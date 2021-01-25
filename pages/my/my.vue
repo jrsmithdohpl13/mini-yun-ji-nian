@@ -1,7 +1,7 @@
 <template>
-	<view>
-		<text @click="goHome">返回首页</text>
-	</view>
+	<scroll-view scroll-y="true">
+		<view></view>
+	</scroll-view>
 </template>
 
 <script>

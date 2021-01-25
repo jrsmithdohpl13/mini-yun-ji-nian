@@ -2,13 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/my/my",
-    "pages/hall/hall"
+    "pages/hall/hall",
+    "pages/dynamic/dynamic",
+    "pages/contribution/contribution"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "云纪念",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
@@ -22,6 +24,12 @@
         "iconPath": "static/icons/home_icon/sy1.png",
         "selectedIconPath": "static/icons/home_icon/sy1_active.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "iconPath": "static/icons/home_icon/sy3.png",
+        "selectedIconPath": "static/icons/home_icon/sy3_active.png",
+        "text": "动态"
       },
       {
         "pagePath": "pages/my/my",

@@ -1,10 +1,10 @@
 <template>
 	<view class="content">
 		<image class="cover-bg" :src="viewObj.coverImg" />
-		<text class="tag">{{viewObj.tag}}</text>
-		<text class="name">{{viewObj.name}}</text>
-		<text class="introText">{{viewObj.introText}}</text>
-		<text class="deesText">{{viewObj.deesText}}</text>
+		<text class="tag">{{ viewObj.tag }}</text>
+		<text class="name">{{ viewObj.name }}</text>
+		<text class="introText">{{ viewObj.introText }}</text>
+		<text class="deesText">{{ viewObj.deesText }}</text>
 		<button @click="toMermryHall" size="mini" type="default">进入纪念馆</button>
 	</view>
 </template>
@@ -24,14 +24,6 @@
 		},
 		data() {
 			return {
-				// viewObj: {
-				// 	coverImg: '/static/images/lzx.jpeg',
-				// 	tag: '民族英雄',
-				// 	name: '林则徐',
-				// 	introText: '鸦片战争领导者',
-				// 	deesText: '1839年，林则徐以钦差大臣赴广东禁烟时，派人明察暗访，强迫外国鸦片商人交出鸦片，并将没收鸦片，于1839年在虎门销毁。',
-				// 	color: 'black'
-				// }
 			};
 		},
 		onLoad() {
@@ -39,7 +31,6 @@
 		},
 		methods: {
 			toMermryHall() {
-				console.log(1);
 				this.$emit('goHall');
 			}
 		}
@@ -51,7 +42,7 @@
 	.content{
 		position: relative;
 		height: 1100rpx;
-		border-bottom: 1px #898989 solid;
+		border-bottom: 1px #BDBDC2 solid;
 		.cover-bg{
 			width: 100%;
 			height: 100%;

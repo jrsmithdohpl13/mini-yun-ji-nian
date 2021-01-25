@@ -7,24 +7,40 @@
 			}
 		}
 	  ,{
-      "path" : "pages/my/my",
-      "style" : {
+      "path": "pages/my/my",
+      "style": {
 				"navigationBarTitleText": "我的",
 				"enablePullDownRefresh": false
       }      
     }
     ,{
-      "path" : "pages/hall/hall",
-      "style" : {
+      "path": "pages/hall/hall",
+      "style": {
         "navigationBarTitleText": "hall",
         "enablePullDownRefresh": false
       }
     }
-  ],
+    ,{
+      "path": "pages/dynamic/dynamic",
+      "style": {
+				"navigationBarTitleText": "动态",
+        "enablePullDownRefresh": false
+      }     
+    }
+      ,{
+            "path" : "pages/contribution/contribution",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "云纪念",
+		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
@@ -37,6 +53,11 @@
 	    "iconPath": "static/icons/home_icon/sy1.png",
 	    "selectedIconPath": "static/icons/home_icon/sy1_active.png",
 	    "text": "首页"
+	  }, {
+	    "pagePath": "pages/dynamic/dynamic",
+	    "iconPath": "static/icons/home_icon/sy3.png",
+	    "selectedIconPath": "static/icons/home_icon/sy3_active.png",
+	    "text": "动态"
 	  }, {
 	    "pagePath": "pages/my/my",
 	    "iconPath": "static/icons/home_icon/sy2.png",

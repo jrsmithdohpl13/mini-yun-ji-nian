@@ -1,16 +1,8 @@
 <template>
-	<!-- <view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-	</view> -->
 	<scroll-view scroll-y="true" scroll-top="40px">
 		<view v-for="(item,index) in viewList" :key="index">
 			<show-card v-bind:viewObj="item" @goHall = "goHall"></show-card>
 		</view>
-		<view style="height: 1000rpx;background-color: #007AFF;">A</view>
-		<view style="height: 1000rpx;background-color: #4CD964;">B</view>
 	</scroll-view>
 </template>
 
@@ -41,7 +33,7 @@
 			}
 		},
 		onLoad() {
-			this.getOpenid();
+			// this.getOpenid();
 		},
 		methods: {
 			
