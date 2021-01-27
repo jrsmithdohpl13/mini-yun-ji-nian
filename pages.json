@@ -9,7 +9,7 @@
 	  ,{
       "path": "pages/my/my",
       "style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
       }      
     }
@@ -27,16 +27,14 @@
         "enablePullDownRefresh": false
       }     
     }
-      ,{
-            "path" : "pages/contribution/contribution",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+    ,{
+      "path" : "pages/contribution/contribution",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }        
+    }
+  ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "云纪念",
