@@ -4,7 +4,8 @@
     "pages/my/my",
     "pages/hall/hall",
     "pages/dynamic/dynamic",
-    "pages/contribution/contribution"
+    "pages/contribution/contribution",
+    "pages/usercenter/usercenter"
   ],
   "subPackages": [],
   "window": {

@@ -20,7 +20,10 @@
 					type='primary' 
 					open-type='getUserInfo' 
 					@getuserinfo='getUserInfo'
-					withCredentials="true">授权登录</button>
+					withCredentials="true">登录</button>
+					<view @click="goCenter"  v-if="isLogin" class="user-center">
+						<image src="../../static/icons/shezhi.png" />
+					</view>
 			</view>	
 			<text></text>
 		</view>
@@ -42,7 +45,7 @@
 				isLogin: false,
 				userInfo: {
 					nickName: '未登录',
-					avatarUrl: '../../static/logo.png'
+					avatarUrl: '../../static/icons/loginout.png'
 				}
 	
 			};
@@ -96,14 +99,9 @@
 				})
 			},
 			
-			// 登出
-			loginOut() {
-				uni.removeStorage({
-				    key: 'oppid',
-				    success: function (res) {
-				        console.log('success');
-								this.isLogin = false;
-				    }
+			goCenter() {
+				uni.navigateTo({
+					url: '../usercenter/usercenter'
 				});
 			},
 			
@@ -164,6 +162,15 @@
 				height: 80rpx;
 				text-align: center;
 				line-height: 80rpx;
+			}
+			.user-center{
+				width: 40rpx;
+				height: 40rpx;
+				margin-left: 80rpx;
+				image{
+					width: 100%;
+					height: 100%;
+				}
 			}
 		}
 	}

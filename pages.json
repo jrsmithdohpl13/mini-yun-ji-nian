@@ -3,7 +3,10 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"usingComponents": {
+					// "swiper-card": "./components/swiper-card"
+				}
 			}
 		}
 	  ,{
@@ -24,8 +27,11 @@
       "path": "pages/dynamic/dynamic",
       "style": {
 				"navigationBarTitleText": "动态",
-        "enablePullDownRefresh": false
-      }     
+        "enablePullDownRefresh": false,
+				"usingComponents": {
+					
+				}
+      }
     }
     ,{
       "path" : "pages/contribution/contribution",
@@ -34,12 +40,21 @@
         "enablePullDownRefresh": false
       }        
     }
+    ,{
+      "path" : "pages/usercenter/usercenter",
+      "style" : {
+        "navigationBarTitleText": "",
+          "enablePullDownRefresh": false
+      }
+    }
   ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "云纪念",
 		"navigationBarBackgroundColor": "#FFFFFF",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"usingComponents": {
+		}
 	},
 	"tabBar": {
 	  "color": "#7A7E83",

@@ -1,11 +1,20 @@
 <template>
-	<view class="content">
-		<image class="cover-bg" :src="viewObj.coverImg" />
-		<text class="tag">{{ viewObj.tag }}</text>
-		<text class="name">{{ viewObj.name }}</text>
-		<text class="introText">{{ viewObj.introText }}</text>
-		<text class="deesText">{{ viewObj.deesText }}</text>
-		<button @click="toMermryHall" size="mini" type="default">进入纪念馆</button>
+	<view class="wrap">
+		<view class="head">
+			<view class="title">
+				<text>{{ viewObj.title }}</text>
+			</view>
+			<text class="subtitle">{{ viewObj.subtitle }}</text>
+		</view>
+		<view class="content"
+				v-for="(item, index) in viewObj.viewChild" v-bind:key="index" >
+			<image class="cover-bg" :src="item.coverImg" />
+			<text class="tag">{{ item.tag }}</text>
+			<text class="name">{{ item.name }}</text>
+			<text class="introText">{{ item.introText }}</text>
+			<text class="deesText">{{ item.deesText }}</text>
+			<button @click="toMermryHall" size="mini" type="default">进入纪念馆</button>
+		</view>
 	</view>
 </template>
 
@@ -14,13 +23,10 @@
 		name: 'ShowCard',
 		props: {
 			viewObj: {
-				coverImg: String,
-				tag: String,
-				name: String,
-				introText: String,
-				deesText: String,
-				color: String
-			},
+				title: String,
+				subtitle: String,
+				viewChild: Array
+			}
 		},
 		data() {
 			return {
@@ -39,10 +45,34 @@
 </script>
 
 <style lang="scss">
+	.wrap{
+		background-color: #FFFFFF;
+	}
+	
+	.head{
+		overflow: hidden;
+		.title{
+			margin: 10rpx 40rpx;
+			font-size: 48rpx;
+			font-weight: 700;
+			box-shadow: 0 1rpx 1rpx #999999;
+		}
+		
+		.subtitle{
+			display: inline-block;
+			height: 40rpx;
+			margin-left: 40rpx;
+			font-size: 24rpx;
+			line-height: 24rpx;
+			color: #999999;
+		}
+		
+	}
+	
 	.content{
 		position: relative;
 		height: 1100rpx;
-		border-bottom: 1px #BDBDC2 solid;
+		box-shadow: 0 1rpx 1rpx #BDBDC2;
 		.cover-bg{
 			width: 100%;
 			height: 100%;

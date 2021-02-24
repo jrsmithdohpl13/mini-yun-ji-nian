@@ -1,9 +1,21 @@
 <template>
+	
 	<scroll-view scroll-y="true" >
 		<view v-for="(item,index) in contriList" :key="index">
 			<contribution-card v-bind:comtriObj="item" @goContri="goContribution()"></contribution-card>
 		</view>
 	</scroll-view>
+	<!-- 	<view>
+			<van-tabs
+			 v-model="active"
+			 color="#99999"
+			 title-active-color="#1890FF">
+			  <van-tab title="标签 1">内容 1</van-tab>
+			  <van-tab title="标签 2">内容 2</van-tab>
+			  <van-tab title="标签 3">内容 3</van-tab>
+			  <van-tab title="标签 4">内容 4</van-tab>
+			</van-tabs>
+		</view> -->
 </template>
 
 <script>
@@ -14,6 +26,7 @@
 		},
 		data() {
 			return {
+				active: 2,
 				contriList: [{
 					title: '打响新冠防疫战1',
 					subtitle: '一只小白兔',
@@ -39,6 +52,12 @@
 			};
 		},
 		methods: {
+			onChange(event) {
+			    uni.showToast({
+			      title: `切换到标签 ${event.detail.name}`,
+			    });
+			  },
+				
 			goContribution() {
 				uni.navigateTo({
 					url: '../contribution/contribution'
