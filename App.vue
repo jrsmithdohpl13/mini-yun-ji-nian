@@ -16,10 +16,8 @@
 	/*每个页面公共css */
 	
 	page{
-		background-color: #EDEDED;
+		/* background-color: #EDEDED; */
+		background-color: #F6F6F9;
 	}
 	
-	uni-page-wrapper{
-		/* background-color: #f4f4f4; */
-	}
 </style>

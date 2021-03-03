@@ -17,10 +17,16 @@
 		</view>
 			
 		<view class="video-player">
-			<video
+			<video autoplay=true
+				muted=true
+				controls=false
+				show-play-btn=false
+				show-fullscreen-btn=false
+				enable-progress-gesture=false
+				loop=true
+				duration="30"
 				:src="comtriObj.videoUrl"
-				controls>
-			</video>
+				></video>
 			<text class="video-intro">{{ comtriObj.intro }}</text>
 		</view>
 		

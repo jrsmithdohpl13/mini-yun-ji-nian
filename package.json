@@ -4,6 +4,6 @@
     "three": "^0.124.0"
   },
   "dependencies": {
-    "@vant/weapp": "^1.6.7"
+    "@dcloudio/uni-ui": "^1.2.11"
   }
 }

@@ -1,10 +1,12 @@
 <template>
 	<view class="">
 		<scroll-view scroll-y="true" scroll-top="40px">
-				<show-card v-bind:viewObj="hallViewObj" @goHall="goHall"></show-card>
-			
+			<show-card v-bind:viewObj="hallViewObj" @goHall="goHall"></show-card>
+
 			<swiper-card></swiper-card>
-			
+
+			<twoclumn-card></twoclumn-card>
+
 			<view class="bloc"></view>
 		</scroll-view>
 	</view>
@@ -13,17 +15,20 @@
 <script>
 	import ShowCard from '../../components/show-card';
 	import SwiperCard from '../../components/swiper-card';
+	import TwoclumnCard from '../../components/twoclumn-card';
+
 	export default {
-		components:{
+		components: {
 			ShowCard,
-			SwiperCard
+			SwiperCard,
+			TwoclumnCard
 		},
 		data() {
 			return {
 				hallViewObj: {
 					title: '英雄长存',
 					subtitle: '快参与到先烈精神的传承中吧～',
-					viewChild:[{
+					viewChild: [{
 						coverImg: '/static/images/lzx.jpeg',
 						tag: '民族英雄',
 						name: '林则徐',
@@ -45,7 +50,7 @@
 			// this.getOpenid();
 		},
 		methods: {
-			
+
 			// 获取openid
 			getOpenid() {
 				uni.showLoading({
@@ -70,10 +75,10 @@
 </script>
 
 <style>
-	.bloc{
+	.bloc {
 		height: 400px;
 	}
-	
+
 	.content {
 		display: flex;
 		flex-direction: column;
