@@ -87,7 +87,7 @@
 		padding: 40rpx 0;
 		
 		.card-item{
-			display: inline-block;
+			float: left;
 			margin-right: 20rpx;
 			margin-bottom: 20rpx;
 			width: 325rpx;

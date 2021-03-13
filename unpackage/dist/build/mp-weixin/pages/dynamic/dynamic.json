@@ -2,6 +2,7 @@
   "navigationBarTitleText": "动态",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "contribution-card": "/components/contribution-card"
+    "contribution-card": "/components/contribution-card",
+    "uni-segmented-control": "/node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control"
   }
 }
