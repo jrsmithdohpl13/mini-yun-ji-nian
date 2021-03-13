@@ -175,17 +175,17 @@
 		}
 	}
 
-.navigation{
-	display: flex;
-	width: 100%;
-	height: 80rpx;
-	margin-top: 10rpx;
-	background-color: #FFFFFF;
-	view{
-		flex: 1;
+	.navigation{
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		width: 100%;
+		height: 80rpx;
+		margin-top: 10rpx;
+		background-color: #FFFFFF;
+		view{
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
-}
 </style>

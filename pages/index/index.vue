@@ -1,11 +1,13 @@
 <template>
 	<view class="">
 		<scroll-view scroll-y="true" scroll-top="40px">
+			
+			
 			<show-card v-bind:viewObj="hallViewObj" @goHall="goHall"></show-card>
 
-			<swiper-card></swiper-card>
+			<swiper-card @goDetail="goDetail"></swiper-card>
 
-			<twoclumn-card></twoclumn-card>
+			<twoclumn-card @goDetail="goDetail"></twoclumn-card>
 
 			<view class="bloc"></view>
 		</scroll-view>
@@ -66,8 +68,18 @@
 			},
 
 			goHall() {
+				let data = {
+					
+				};
 				uni.navigateTo({
 					url: '../hall/hall'
+				});
+			},
+			
+			goDetail(id) {
+				console.log(id);
+				uni.navigateTo({
+					url: '../detail/detail'
 				});
 			}
 		}

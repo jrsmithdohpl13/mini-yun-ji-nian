@@ -8,7 +8,8 @@
 				<view class="page-section-spacing">
 					<swiper class="swiper" style="height: 400px;" previous-margin="100rpx" next-margin="100rpx">
 						<swiper-item v-for="(item, index) in viewObj.viewChild" v-bind:key="index" style="overflow: visible;">
-							<view class="swiper-item">
+							<view class="swiper-item"
+								@click="onDetail(item.storyid)">
 								<image class="cover-bg" :src="item.coverbgUrl"
 								 v-if="(item.coverbgUrl&&!item.centerbgUrl) || (item.coverbgUrl&&item.centerbgUrl)"/>
 								<view class="head">
@@ -41,16 +42,19 @@
 				viewObj: {
 					title: '英雄故事',
 					viewChild: [{
+						storyid: 1,
 						coverbgUrl: '/static/logo.png',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
 						subtitle: '百万雄师永不灭'
 					}, {
+						storyid: 2,
 						coverbgUrl: '',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
 						subtitle: '百万雄师永不灭'
 					}, {
+						storyid: 3,
 						coverbgUrl: '',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
@@ -60,6 +64,12 @@
 			}
 		},
 		methods: {
+			onDetail(id) {
+				this.$emit('goDetail', {
+					id: id
+				});
+			}
+			
 		}
 	}
 </script>

@@ -5,7 +5,9 @@
 				<text>{{ viewObj.title }}</text>
 			</view>
 			<view class="content">
-				<view class="card-item" v-for="(item,index) in viewObj.viewChild" :key="index">
+				<view class="card-item"
+					v-for="(item,index) in viewObj.viewChild" :key="index"
+					@click="onDetail(item.type)" >
 					<view class="head">
 						<text>{{ item.title }}</text>
 					</view>
@@ -32,21 +34,25 @@
 				viewObj: {
 					title: '英雄分类',
 					viewChild: [{
+						type: 1,
 						coverbgUrl: '/static/logo.png',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
 						subtitle: '百万雄师永不灭'
 					}, {
+						type: 2,
 						coverbgUrl: '',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
 						subtitle: '百万雄师永不灭'
 					}, {
+						type: 3,
 						coverbgUrl: '',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
 						subtitle: '百万雄师永不灭'
 					}, {
+						type: 4,
 						coverbgUrl: '',
 						centerbgUrl: '/static/icons/shezhi.png',
 						title: '民族英雄民族魂',
@@ -56,6 +62,11 @@
 			}
 		},
 		methods: {
+			onDetail(typeid) {
+				this.$emit('goDetail', {
+					id: typeid
+				});
+			}
 		}
 	}
 </script>

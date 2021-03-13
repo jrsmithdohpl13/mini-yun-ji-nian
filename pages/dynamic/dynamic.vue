@@ -95,6 +95,7 @@
 
 <style lang="scss">
 	.dynamic_tab {
+		background-color: #FFFFFF;
 		.dynamic_tab_title {
 			width: 60%;
 			margin: 0 auto;
